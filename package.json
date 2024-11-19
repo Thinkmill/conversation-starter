@@ -1,0 +1,37 @@
+{
+	"name": "@thinkmill/conversation-starter",
+	"version": "2.0.0",
+	"private": true,
+	"license": "MIT",
+	"workspaces": [
+		"site/",
+		"cms/"
+	],
+	"scripts": {
+		"dev": "concurrently -k \"npm:dev:*\"",
+		"dev:keystone": "cd cms && keystone dev",
+		"dev:site": "cd site && yarn dev -p 4000",
+		"format": "prettier --write \"**/*.{js,ts,md,mdx,json,html}\"",
+		"test": "yarn test:format && yarn test:lint",
+		"test:format": "prettier --list-different \"**/*.{js,ts,md,mdx,json,html}\"",
+		"test:lint": "cd site && next lint"
+	},
+	"dependencies": {
+		"next": "12.1.3"
+	},
+	"devDependencies": {
+		"@typescript-eslint/eslint-plugin": "^5.12.1",
+		"@typescript-eslint/parser": "^5.12.1",
+		"concurrently": "^7.0.0",
+		"eslint": "^7.30.0",
+		"eslint-config-next": "^11.0.1",
+		"eslint-config-prettier": "^8.3.0",
+		"eslint-plugin-react": "^7.24.0",
+		"eslint-plugin-storybook": "^0.5.7",
+		"prettier": "^2.5.1",
+		"typescript": "^4.5.5"
+	},
+	"engines": {
+		"node": "^14.15 || ^16.13"
+	}
+}

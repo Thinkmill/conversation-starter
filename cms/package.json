@@ -1,0 +1,22 @@
+{
+	"name": "@thinkmill/conversation-starter-cms",
+	"version": "2.0.0",
+	"private": true,
+	"license": "MIT",
+	"scripts": {
+		"build": "keystone build",
+		"dev": "keystone dev",
+		"start": "keystone start"
+	},
+	"dependencies": {
+		"@keystone-6/core": "^1.1.0",
+		"@prisma/client": "^3.11.1"
+	},
+	"devDependencies": {
+		"prisma": "^3.11.1",
+		"typescript": "^4.5.5"
+	},
+	"engines": {
+		"node": "^14.15 || ^16.13"
+	}
+}
